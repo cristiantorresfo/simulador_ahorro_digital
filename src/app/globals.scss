@@ -1,12 +1,20 @@
 :root {
-  --background: #ffffff;
+  --background: #f4f6fa;
   --foreground: #171717;
+  --bcs-blue: #0091CF;
+  --bcs-red:  #E12233;
+  --bcs-white: #FFFFFF;
+  --bcs-dark: #0A0A0A; 
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --bcs-blue: #0091CF;
+    --bcs-red:  #E12233;
+    --bcs-white: #FFFFFF;
+    --bcs-dark: #0A0A0A; 
   }
 }
 

@@ -1,0 +1,78 @@
+
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    var(--bcs-blue )0%,
+    var(--bcs-blue) 40%,
+    var(--bcs-red) 100%
+  );
+  color: #fff;
+  overflow: hidden;
+}
+
+/* capa translúcida para potenciar contraste */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(2px);
+}
+
+/* contenido centrado */
+.content {
+  position: relative;
+  max-width: 800px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* título principal */
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #ffebeb;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* subtítulo */
+.subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+/* botón */
+.button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--background);
+  color: #0091cf;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+      transform: translateY(-4px);
+      background: #ddf7fa;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+}
