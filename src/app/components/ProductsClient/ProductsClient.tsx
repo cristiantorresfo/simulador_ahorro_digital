@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import ProductList from "../ProductList/ProductList";
 import { debounce } from "../../lib/debounce";
 import styles from "./products.module.scss";
+import Input from "../Input/Input";
 
 export const ProductsClient = ({ initialProducts }: { initialProducts: any[] }) =>{
   const [query, setQuery] = useState("");
@@ -25,11 +26,9 @@ export const ProductsClient = ({ initialProducts }: { initialProducts: any[] }) 
   return (
     <div className={styles.container}>
       <h1>Productos</h1>
-      <input
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        className={styles.search}
-      />
+      <div className={styles.search}>
+       <Input value={query} onChange={(e) => setQuery(e.target.value)} label="Buscar Producto"/>
+      </div>
       <ProductList products={filtered} />
     </div>
   );

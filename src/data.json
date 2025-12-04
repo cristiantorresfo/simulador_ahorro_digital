@@ -3,18 +3,80 @@
     "id": 1,
     "name": "Cuenta de Ahorros Clásica",
     "type": "Ahorro",
-    "description": "Una cuenta sencilla para iniciar tu ahorro."
+    "description": "Una cuenta sencilla para iniciar tu ahorro.",
+    "rate": 0.012,
+    "image":"/imagen1.svg"
   },
   {
     "id": 2,
     "name": "Cuenta Meta Futuro",
     "type": "Ahorro Programado",
-    "description": "Ideal para metas a mediano plazo."
+    "description": "Ideal para metas a mediano plazo. Plazos flexibles.",
+    "rate": 0.025,
+     "image":"/imagen2.jpg"
   },
   {
     "id": 3,
     "name": "Ahorro Universitario",
     "type": "Ahorro",
-    "description": "Pensada para estudios y educación."
+    "description": "Pensada para tus estudios y educación.",
+    "rate": 0.015,
+    "image":"/universitario.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Cuenta DigiExpress",
+    "type": "Ahorro",
+    "description": "Apertura 100% digital y manejo sin costo administrativo.",
+    "rate": 0.010,
+     "image":"/imagen1.svg"
+  },
+  {
+    "id": 5,
+    "name": "Ahorro Seguro Plus",
+    "type": "Ahorro Programado",
+    "description": "Programa tus depósitos automáticos y asegúrate de cumplir tus metas.",
+    "rate": 0.030,
+     "image":"/imagen3.jpg"
+  },
+  {
+    "id": 6,
+    "name": "CDT Tradicional",
+    "type": "Inversión",
+    "description": "Rentabilidad fija y garantizada a un plazo establecido.",
+    "rate": 0.065,
+     "image":"/imagen4.jpg"
+  },
+  {
+    "id": 7,
+    "name": "CDT Escalonado",
+    "type": "Inversión",
+    "description": "Entre más tiempo mantengas la inversión, mayor será la tasa.",
+    "rate": 0.085,
+     "image":"/imagen5.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Ahorro Vacacional",
+    "type": "Ahorro Programado",
+    "description": "Ideal para planear viajes y gastos recreativos.",
+    "rate": 0.028,
+     "image":"/vacacional.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Ahorro para Emergencias",
+    "type": "Ahorro",
+    "description": "Un fondo de respaldo para imprevistos.",
+    "rate": 0.013,
+     "image":"/emergencias.svg"
+  },
+  {
+    "id": 10,
+    "name": "Cuenta de Ahorro Infantil",
+    "type": "Ahorro",
+    "description": "Diseñada para enseñar a los niños el hábito del ahorro.",
+    "rate": 0.011,
+     "image":"/infantil.jpg"
   }
 ]

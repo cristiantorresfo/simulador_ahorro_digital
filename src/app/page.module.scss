@@ -18,7 +18,6 @@
   overflow: hidden;
 }
 
-/* capa translúcida para potenciar contraste */
 .overlay {
   position: absolute;
   inset: 0;
@@ -26,7 +25,6 @@
   backdrop-filter: blur(2px);
 }
 
-/* contenido centrado */
 .content {
   position: relative;
   max-width: 800px;
@@ -34,7 +32,6 @@
   z-index: 2;
 }
 
-/* título principal */
 .title {
   font-size: 3rem;
   font-weight: 800;
@@ -47,7 +44,6 @@
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
 }
 
-/* subtítulo */
 .subtitle {
   font-size: 1.25rem;
   font-weight: 300;
@@ -56,7 +52,6 @@
   opacity: 0.9;
 }
 
-/* botón */
 .button {
   cursor: pointer;
   display: inline-block;
@@ -72,7 +67,7 @@
 
   &:hover {
       transform: translateY(-4px);
-      background: #ddf7fa;
+      border:2px solid #32c0d0;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
   }
 }

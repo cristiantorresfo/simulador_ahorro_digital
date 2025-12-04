@@ -1,0 +1,76 @@
+.wrapper {
+  width: 100%;
+}
+
+.field {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    padding: 1.4rem 1.2rem 0; // espacio para label flotante
+    background: var(--bcs-white);
+    border: 2px solid transparent;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    color: var(--bcs-dark);
+
+    outline: none;
+    transition: all 0.25s ease;
+
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      background: #e8f6fd;
+    }
+
+    &:focus {
+      border-color: var(--bcs-blue);
+      background: white;
+      box-shadow: 0 0 0 3px rgba(0, 145, 207, 0.2);
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+
+    color: #666;
+    font-size: 1rem;
+
+    pointer-events: none;
+    transition: all 0.2s ease;
+  }
+
+  /* Label flotante */
+  input:focus + label,
+  .filled + label {
+    top: 0.4rem;
+    left: 1.1rem;
+    font-size: 0.75rem;
+    color: var(--bcs-blue);
+    font-weight: 600;
+  }
+
+  input:not(:placeholder-shown) + label {
+    top: 0.4rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* ---------------------------------------
+   🔵 ESTILOS ESPECIALES PARA NO-LABEL
+---------------------------------------- */
+
+.noLabel {
+  input {
+    padding: 0.4rem 1rem !important; /* 🔥 más compacto */
+    font-size: 0.95rem;
+  }
+
+  label {
+    display: none !important; /* 🔥 no existe label */
+  }
+}
