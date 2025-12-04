@@ -1,0 +1,23 @@
+/* backButton.module.scss */
+.backButton {
+  background-color: var(--bcs-blue);
+  color: var(--bcs-white);
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  &:hover {
+    background-color: var(--bcs-blueLight);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}

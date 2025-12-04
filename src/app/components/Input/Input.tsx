@@ -23,7 +23,8 @@ export default function Input({
       <input
         type={type}
         value={value}
-        onChange={onChange}
+          onChange={(e) => onChange(e.target.value)}
+
         className={hasValue ? styles.filled : ""}
         placeholder={noLabel ? label : " "}
       />

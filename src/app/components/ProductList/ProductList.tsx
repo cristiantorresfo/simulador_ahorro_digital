@@ -18,7 +18,6 @@ export default function ProductList({ products }: { products: any[] }) {
     const itemWidth = itemEl.clientWidth + 24; // +gap aproximado
 
     if (direction === "left") {
-      // si estamos en el inicio → ir al final
       if (c.scrollLeft <= 0) {
         c.scrollTo({ left: c.scrollWidth, behavior: "smooth" });
       } else {
@@ -29,8 +28,6 @@ export default function ProductList({ products }: { products: any[] }) {
     if (direction === "right") {
       const isAtEnd =
         c.scrollLeft + c.clientWidth >= c.scrollWidth - 5;
-
-      // si estamos en el final → volver al inicio
       if (isAtEnd) {
         c.scrollTo({ left: 0, behavior: "smooth" });
       } else {
@@ -58,9 +55,9 @@ export default function ProductList({ products }: { products: any[] }) {
       </button>
 
       <div ref={carouselRef} className={styles.carousel}>
-        {products.map((p) => (
+        {products?.map((p) => (
           <div key={p.id} className={styles.item}>
-            <Card title={p.name} image={p.image}>
+            <Card title={p.name} image={p.image} rate={p.rate} >
               <p><strong>Tipo:</strong> {p.type}</p>
               <p>{p.description}</p>
               {p.rate && (

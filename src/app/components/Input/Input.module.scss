@@ -44,7 +44,6 @@
     transition: all 0.2s ease;
   }
 
-  /* Label flotante */
   input:focus + label,
   .filled + label {
     top: 0.4rem;
@@ -60,9 +59,6 @@
   }
 }
 
-/* ---------------------------------------
-   🔵 ESTILOS ESPECIALES PARA NO-LABEL
----------------------------------------- */
 
 .noLabel {
   input {

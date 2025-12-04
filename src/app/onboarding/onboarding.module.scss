@@ -1,0 +1,182 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 2rem 1rem;
+  background-color: var(--backgroundLight);
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: var(--background);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h1 {
+      color: var(--bcs-blue);
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+
+    .error {
+      color: var(--bcs-red);
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    .result {
+      margin-top: 1.5rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: var(--bcs-red);
+    }
+
+    .button {
+      background-color: var(--bcs-red);
+      color: var(--bcs-white);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      margin-top: 1.5rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: #c11b2a;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
+    .inputsWrapper {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      margin: 2rem 0;
+      min-width: 400px;
+      .inputForm {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .error {
+        font-size: 0.8rem;
+      }
+    }
+    .FormButton {
+      background-color: var(--bcs-blue);
+      color: var(--bcs-white);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 1rem;
+      &:hover {
+        background-color: #45aae5;
+      }
+
+      &:active {
+        transform: scale(0.97);
+      }
+    }
+  }
+
+  .recaptchaWrapper {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recaptchaButton {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--bcs-dark);
+    background-color: var(--bcs-white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: var(--background);
+    }
+  }
+
+  .recaptchaSuccess {
+    background-color: #d4edda;
+    border-color: #28a745;
+    color: #155724;
+  }
+
+  .recaptchaFail {
+    font-size: 0.8rem;
+    background-color: #f8d7da;
+    border-color: #dc3545;
+    color: #721c24;
+  }
+
+  /* onboarding.module.scss */
+
+  .popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .popup {
+    background: var(--bcs-white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .popup h2 {
+    color: var(--bcs-blue);
+    margin-bottom: 1rem;
+  }
+
+  .popup p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .closeButton {
+    background-color: var(--bcs-red);
+    color: var(--bcs-white);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #c11b2a;
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+}

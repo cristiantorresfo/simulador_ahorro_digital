@@ -27,7 +27,7 @@ export const ProductsClient = ({ initialProducts }: { initialProducts: any[] }) 
     <div className={styles.container}>
       <h1>Productos</h1>
       <div className={styles.search}>
-       <Input value={query} onChange={(e) => setQuery(e.target.value)} label="Buscar Producto"/>
+       <Input value={query} onChange={setQuery} label="Buscar Producto"/>
       </div>
       <ProductList products={filtered} />
     </div>
