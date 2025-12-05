@@ -47,7 +47,7 @@ export default function SimulatorClient({ name, rate }: Props) {
     <div className={styles.page}>
       <BackButton />
       <div className={styles.container}>
-        <h1>Simulador de {name}</h1>
+        <h1>Simulador de {name} - {rateValue *100 } E.A%</h1>
 
         <div className={styles.inputsWrapper}>
           <Input label="Monto inicial (COP)" value={initial} onChange={setInitial} type="number" />
