@@ -63,15 +63,21 @@ app/
 
 ✔ ISR es ideal porque:
     1.  Los productos no cambian constantemente (provienen de un JSON local).
+
     2.  Genera HTML estático, lo que mejora:
+
         •   velocidad de carga
         •   SEO
         •   rendimiento en dispositivos móviles
+
     3.  Permite regenerar la página cada cierto tiempo sin enlentecer el build.
+
     4.  Reduce la carga de servidores en producción.
+
     5.  Está alineado con buenas prácticas para catálogos financieros.
 
 ✔ SSR sería mejor si:
+
     •   Los productos cambiaran cada minuto.
     •   El contenido dependiera del usuario (cookies, sesión, personalización).
     •   Se consumieran APIs altamente dinámicas.
@@ -79,17 +85,20 @@ app/
 ## Simulador
 
 El usuario ingresa:
+
     •   Monto inicial
     •   Aporte mensual
     •   Tiempo en meses
 
 La aplicación:
+
     •   Valida cada campo
     •   Formatea la salida en COP
     •   Calcula un estimado mediante interés compuesto
 
 Fórmula usada: 
-MontoFinal = MontoInicial * (1 + r)^m 
+
+    •   MontoFinal = MontoInicial * (1 + r)^m 
            + AporteMensual * [((1 + r)^m - 1) / r]
 
            Parámetros:
