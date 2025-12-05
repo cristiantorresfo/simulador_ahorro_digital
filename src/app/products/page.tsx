@@ -1,7 +1,7 @@
 
 import {ProductsClient} from "../components/ProductsClient/ProductsClient";
 
-  export const revalidate = 60;
+export const revalidate = 60;
 
 async function getProducts() {
   const products = await import("../../data.json");

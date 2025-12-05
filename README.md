@@ -1,8 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📄 README – Simulador de Ahorro Digital 
 
-## Getting Started
+## Descripción
 
-First, run the development server:
+Este repositorio contiene la solución al reto técnico Simulador de Ahorro Digital, implementado con:
+    •   Next.js 16.0.7 (App Router)
+    •   React 19.2.0 
+    •   TypeScript
+    •   SCSS modules
+    •   ISR con revalidate
+    •   crypto.randomUUID
+    •   Debounce manual
+
+## Estructura del proyecto
+
+/
+├── app/
+│   ├── layout.tsx
+│   ├── globals.scss
+│   ├── products/
+│   │   ├── page.tsx
+│   │   └── products.module.scss
+│   ├── simulator/
+│   │   ├── page.tsx
+│   │   └── simulator.module.scss
+│   ├── onboarding/
+│   │   ├── page.tsx
+│   │   └── onboarding.module.scss
+│   └── components/
+│   │   ├── BackButton/
+│   │   │   ├── BackButton.tsx
+│   │   │   ├── backButton.module.scss
+│   │   ├── Card/
+│   │   │   ├── Card.tsx
+│   │   │   ├── card.module.scss
+│   │   ├── Input/
+│   │   │   ├── Input.tsx
+│   │   │   ├── input.module.scss
+│   │   ├── Onboarding/
+│   │   │   ├── Onboarding.tsx
+│   │   │   ├── onboarding.module.scss
+│   │   ├── ProductList/
+│   │   │   ├── ProductList.tsx
+│   │   │   ├── productList.module.scss
+│   │   ├── ProductsClient
+│   │   │   ├── ProductsClient.tsx
+│   │   │   ├── productsClient.module.scss
+│   │   ├── ProductList/
+│   │   │   ├── SimulatorClient.tsx
+│   │   │   ├── simulatorClient.module.scss
+|   └── lib/
+│       └── debounce.ts
+│   └── data.json
+└── README.md
+
+## Funciones implementadas
+
+    •   Carga de productos desde un archivo JSON
+    •   Filtros por nombre o tipo
+    •   Debounce de 300ms para evitar renders innecesarios
+    •   Renderizado usando ISR (Incremental Static Regeneration)
+
+## Elección de ISR
+
+✔ ISR es ideal porque:
+    1.  Los productos no cambian constantemente (provienen de un JSON local).
+    2.  Genera HTML estático, lo que mejora:
+        •   velocidad de carga
+        •   SEO
+        •   rendimiento en dispositivos móviles
+    3.  Permite regenerar la página cada cierto tiempo sin enlentecer el build.
+    4.  Reduce la carga de servidores en producción.
+    5.  Está alineado con buenas prácticas para catálogos financieros.
+
+✔ SSR sería mejor si:
+    •   Los productos cambiaran cada minuto.
+    •   El contenido dependiera del usuario (cookies, sesión, personalización).
+    •   Se consumieran APIs altamente dinámicas.
+
+## Simulador
+
+El usuario ingresa:
+    •   Monto inicial
+    •   Aporte mensual
+    •   Tiempo en meses
+
+La aplicación:
+    •   Valida cada campo
+    •   Formatea la salida en COP
+    •   Calcula un estimado mediante interés compuesto
+
+Fórmula usada: 
+MontoFinal = MontoInicial * (1 + r)^m 
+           + AporteMensual * [((1 + r)^m - 1) / r]
+
+           Parámetros:
+    •   r = rentabilidad según el producto elegido
+    •   m = meses
+
++
+## Onboarding
+
+Incluye:
+    •   Nombre
+    •   Documento
+    •   Email
+    •   Recaptcha simulado 
+
+✔ Lógica
+    •   Si token !== "OK" → error visual
+    •   Si es válido → genera solicitud con: crypto.randomUUID()
+
+## Instalación y ejecución en desarrollo (local) 
+
+```bash
+npm install
+# or
+yarn add
+# or
+pnpm add
+# or
+bun add
+```
 
 ```bash
 npm run dev
@@ -14,23 +132,4 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Abrir en [http://localhost:3000](http://localhost:3000) con el navegador deseado para ver el resultado.

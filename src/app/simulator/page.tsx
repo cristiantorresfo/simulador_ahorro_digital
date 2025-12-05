@@ -6,7 +6,7 @@ interface SearchParams {
   rate?: string;
 }
 
-export default function Page(props: { searchParams: Promise<SearchParams> }) {
+export default function SimulatorPage(props: { searchParams: Promise<SearchParams> }) {
   const searchParams = use(props.searchParams); 
 
   const name = searchParams.name ?? "";

@@ -15,7 +15,7 @@ export default function ProductList({ products }: { products: any[] }) {
     const itemEl = c.querySelector(`.${styles.item}`) as HTMLElement;
     if (!itemEl) return;
 
-    const itemWidth = itemEl.clientWidth + 24; // +gap aproximado
+    const itemWidth = itemEl.clientWidth + 24; 
 
     if (direction === "left") {
       if (c.scrollLeft <= 0) {

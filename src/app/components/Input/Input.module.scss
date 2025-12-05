@@ -8,7 +8,7 @@
 
   input {
     width: 100%;
-    padding: 1.4rem 1.2rem 0; // espacio para label flotante
+    padding: 1.4rem 1.2rem 0;
     background: var(--bcs-white);
     border: 2px solid transparent;
     border-radius: 10px;
@@ -59,14 +59,13 @@
   }
 }
 
-
 .noLabel {
   input {
-    padding: 0.4rem 1rem !important; /* 🔥 más compacto */
+    padding: 0.4rem 1rem !important;
     font-size: 0.95rem;
   }
 
   label {
-    display: none !important; /* 🔥 no existe label */
+    display: none !important;
   }
 }
