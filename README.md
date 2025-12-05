@@ -3,6 +3,7 @@
 ## Descripción
 
 Este repositorio contiene la solución al reto técnico Simulador de Ahorro Digital, implementado con:
+
     •   Next.js 16.0.7 (App Router)
     •   React 19.2.0 
     •   TypeScript
@@ -52,6 +53,7 @@ Este repositorio contiene la solución al reto técnico Simulador de Ahorro Digi
 │       └── debounce.ts
 │   └── data.json
 └── README.md
+/
 
 ## Funciones implementadas
 
