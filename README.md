@@ -144,4 +144,4 @@ Abrir en [http://localhost:3000](http://localhost:3000) con el navegador deseado
 
 ## Deploy
 
-Acceder en https://simuladorahorrodigitalbcs.vercel.app/
+Acceder en https://simuladorahorrodigitalct.vercel.app/
