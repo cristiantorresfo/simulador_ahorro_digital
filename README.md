@@ -13,48 +13,45 @@ Este repositorio contiene la solución al reto técnico Simulador de Ahorro Digi
     •   Debounce manual
 
 ## Estructura del proyecto
-
-/
-├── app/
-│   ├── layout.tsx
-│   ├── globals.scss
-│   ├── products/
-│   │   ├── page.tsx
-│   │   └── products.module.scss
-│   ├── simulator/
-│   │   ├── page.tsx
-│   │   └── simulator.module.scss
-│   ├── onboarding/
-│   │   ├── page.tsx
+```
+app/
+├── layout.tsx
+├── globals.scss
+├── products/
+│   ├── page.tsx
+│   └── products.module.scss
+├── simulator/
+│   ├── page.tsx
+│   └── simulator.module.scss
+├── onboarding/
+│   ├── page.tsx
+│   └── onboarding.module.scss
+├── components/
+│   ├── BackButton/
+│   │   ├── BackButton.tsx
+│   │   └── backButton.module.scss
+│   ├── Card/
+│   │   ├── Card.tsx
+│   │   └── card.module.scss
+│   ├── Input/
+│   │   ├── Input.tsx
+│   │   └── input.module.scss
+│   ├── Onboarding/
+│   │   ├── Onboarding.tsx
 │   │   └── onboarding.module.scss
-│   └── components/
-│   │   ├── BackButton/
-│   │   │   ├── BackButton.tsx
-│   │   │   ├── backButton.module.scss
-│   │   ├── Card/
-│   │   │   ├── Card.tsx
-│   │   │   ├── card.module.scss
-│   │   ├── Input/
-│   │   │   ├── Input.tsx
-│   │   │   ├── input.module.scss
-│   │   ├── Onboarding/
-│   │   │   ├── Onboarding.tsx
-│   │   │   ├── onboarding.module.scss
-│   │   ├── ProductList/
-│   │   │   ├── ProductList.tsx
-│   │   │   ├── productList.module.scss
-│   │   ├── ProductsClient
-│   │   │   ├── ProductsClient.tsx
-│   │   │   ├── productsClient.module.scss
-│   │   ├── ProductList/
-│   │   │   ├── SimulatorClient.tsx
-│   │   │   ├── simulatorClient.module.scss
-|   └── lib/
-│       └── debounce.ts
-│   └── data.json
-└── README.md
-/
-
+│   ├── ProductList/
+│   │   ├── ProductList.tsx
+│   │   └── productList.module.scss
+│   ├── ProductsClient/
+│   │   ├── ProductsClient.tsx
+│   │   └── productsClient.module.scss
+│   └── SimulatorClient/
+│       ├── SimulatorClient.tsx
+│       └── simulatorClient.module.scss
+├── lib/
+│   └── debounce.ts
+└── data.json
+```
 ## Funciones implementadas
 
     •   Carga de productos desde un archivo JSON
