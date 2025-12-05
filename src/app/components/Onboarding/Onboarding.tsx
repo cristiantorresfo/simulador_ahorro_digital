@@ -58,7 +58,7 @@ export default function Onboarding() {
 
         setErrors({ name: "", document: "", email: "", recaptcha: "" });
         const uuid = crypto.randomUUID();
-        setSuccessPopup(`Solicitud registrada: ${uuid}`);
+        setSuccessPopup(`Tu solicitud ha sido registrada exitosamente con el ID: ${uuid}`);
     };
 
     const handleRecaptcha = () => {
